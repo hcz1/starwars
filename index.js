@@ -1,7 +1,7 @@
 const fetch = require('node-fetch');
-const starwarsURl = 'http://swapi.co/api/people/1';
+const starwarsURL = 'http://swapi.co/api/people/1';
 
-fetchData(starwarsURl)
+fetchData(starwarsURL)
     .then(luke => {return {name:luke.name, films:luke.films}})
     .then(lukeObj => {
         console.log(lukeObj.name + " has been in ");
@@ -10,8 +10,8 @@ fetchData(starwarsURl)
     .catch(e => console.log(e)) 
     
 
-function fetchData(starwarsURl){
-    return fetch(starwarsURl)
+function fetchData(starwarsURL){
+    return fetch(starwarsURL)
             .then(res => res.json())
             .catch(err => console.log(err))
 }
