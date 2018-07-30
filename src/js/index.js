@@ -12,7 +12,7 @@ function starwars(url,i){
             document.body.appendChild(createDiv)
             let divs = document.getElementById("list"+i)
 
-            divs.innerHTML = `${charName}: has been in     `;
+            divs.innerHTML = `${charName} has been in: `;
             getFilms(characterObj.films, i);
             
             if(i<=10){
